@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker - Mustangs Fitness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mustangs Fitness</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="workout.html">Workout Tracker</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Interactive Workout Tracker</h2>
+            <p>Track your progress with this interactive workout visualization. See your strength gains in real-time!</p>
+            
+            <div class="canvas-container">
+                <h3>Live Workout Visualization</h3>
+                <canvas id="workoutCanvas" width="800" height="400"></canvas>
+                
+                <div class="animation-controls">
+                    <button id="startBtn" class="control-btn">Start Workout</button>
+                    <button id="pauseBtn" class="control-btn" disabled>Pause</button>
+                    <button id="resetBtn" class="control-btn">Reset</button>
+                    <button id="addWeightBtn" class="control-btn">Add Weight</button>
+                </div>
+            </div>
+            
+            <div class="workout-stats">
+                <div class="stat-item">
+                    <span class="stat-value" id="currentWeight">135</span>
+                    <span class="stat-label">Current Weight (lbs)</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="totalReps">0</span>
+                    <span class="stat-label">Total Reps</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="workoutTime">00:00</span>
+                    <span class="stat-label">Workout Time</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="caloriesBurned">0</span>
+                    <span class="stat-label">Calories Burned</span>
+                </div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-label">
+                    <span>Workout Progress</span>
+                    <span id="progressPercent">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+            
+            <h3>Today's Workout Plan</h3>
+            <div class="exercise-list">
+                <div class="exercise-card slide-in">
+                    <div class="exercise-name">Bench Press</div>
+                    <div class="exercise-muscle">Chest, Shoulders, Triceps</div>
+                    <div class="exercise-progress" id="benchProgress">0/4 sets completed</div>
+                </div>
+                <div class="exercise-card slide-in">
+                    <div class="exercise-name">Barbell Squats</div>
+                    <div class="exercise-muscle">Quads, Hamstrings, Glutes</div>
+                    <div class="exercise-progress" id="squatProgress">0/4 sets completed</div>
+                </div>
+                <div class="exercise-card slide-in">
+                    <div class="exercise-name">Deadlifts</div>
+                    <div class="exercise-muscle">Back, Hamstrings, Glutes</div>
+                    <div class="exercise-progress" id="deadliftProgress">0/3 sets completed</div>
+                </div>
+                <div class="exercise-card slide-in">
+                    <div class="exercise-name">Overhead Press</div>
+                    <div class="exercise-muscle">Shoulders, Triceps</div>
+                    <div class="exercise-progress" id="pressProgress">0/3 sets completed</div>
+                </div>
+            </div>
+            
+            <h3>How to Use the Tracker</h3>
+            <ol>
+                <li>Click "Start Workout" to begin the timer and animation</li>
+                <li>Click "Add Weight" to simulate adding plates to the barbell</li>
+                <li>Watch the animation to see proper lifting form</li>
+                <li>Track your progress with the live statistics</li>
+                <li>Use "Pause" to take breaks and "Reset" to start over</li>
+            </ol>
+            
+            <h3>Workout Tips</h3>
+            <ul>
+                <li>Always warm up before heavy lifting</li>
+                <li>Maintain proper form to prevent injury</li>
+                <li>Increase weight gradually (5-10 lbs per week)</li>
+                <li>Rest 60-90 seconds between sets</li>
+                <li>Stay hydrated throughout your workout</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Iron Forge Fitness. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:info@sjdcfitness.com">info@sjdcfitness.com</a></p>
+    </footer>
+    
+    <script src="animation.js"></script>
+</body>
+</html>
